@@ -1,0 +1,22 @@
+{% extends "/layouts/main.html" %}
+{% block body %}
+<div class="row">
+  <div class="col-4 offset-4">
+    <div class="card">
+      <img src="https://res.cloudinary.com/dta3svuvn/image/upload/v1593122049/fdajojm463cm5u7ogk2c.jpg"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+      
+        <p class="card-text">Title: {{ propierty['title']}} </p>
+        <p class="card-text">Type: {{ propierty['type_']}} </p>
+        <p class="card-text">Address: {{ propierty['address']}} </p>
+        <p class="card-text">Rooms: {{ propierty['rooms']}} </p>
+        <p class="card-text">Price: {{ propierty['price']}} </p>
+        <p class="card-text">Area: {{ propierty['area']}} </p>
+        <p class="card-text">Picture: {{ propierty['picture']}} </p>
+        <a href="/" class="btn btn-primary">Go back</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

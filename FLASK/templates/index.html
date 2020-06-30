@@ -1,0 +1,39 @@
+{% extends "/layouts/main.html" %}
+
+{% block body %}
+
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Type</th>
+      <th scope="col">Address</th>
+      <th scope="col">Rooms</th>
+      <th scope="col">Area</th>
+      <th scope="col">Price</th>
+      <th scope="col">Picture</th>
+      <th colspan="2" class="text-center">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for propierty in propierties %}
+    <tr>
+      <th scope="row">{{propierty['_id']}}</th>
+      <td>{{propierty['title']}}</td>
+      <td>{{propierty['type_']}}</td>
+      <td>{{propierty['address']}}</td>
+      <td>{{propierty['rooms']}}</td>
+      <td>{{propierty['area']}}</td>
+      <td>{{propierty['price']}}</td>
+      <td>
+        <img src="{{propierty['picture']}}" class="rounded-circle" width="200" height="200" alt="Sheep" />
+      </td>
+      <td><a href="/view/{{propierty['_id']}}" class="btn btn-info">View</a></td>
+      <td><a href="/delete/{{propierty['_id']}}" class="btn btn-danger">Delete</a></td>
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+
+{% endblock %}

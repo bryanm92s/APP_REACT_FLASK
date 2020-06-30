@@ -1,0 +1,38 @@
+
+{% extends "/layouts/main.html" %}
+
+
+{% block body %}
+
+<form method="POST" action="/save">
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" name="title_input" class="form-control" id="title_input" aria-describedby="emailHelp" />
+    </div>
+    <div class="form-group">
+        <label for="type">Type:</label>
+        <input type="text" name="type_input" class="form-control" id="type_input" aria-describedby="emailHelp" />
+    </div>
+    <div class="form-group">
+        <label for="address">Addres:</label>
+        <input type="text" name="address_input" class="form-control" id="address_input" aria-describedby="emailHelp" />
+    </div>
+
+    <div class="form-group">
+        <label for="rooms">Rooms:</label>
+        <input type="number" name="rooms_input" class="form-control" id="rooms_input" aria-describedby="emailHelp" />
+    </div>
+
+    <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" name="price_input" class="form-control" id="price_input" aria-describedby="emailHelp" />
+    </div>
+
+    <div class="form-group">
+        <label for="area">Area:</label>
+        <input type="number" name="area_input" class="form-control" id="area_input" aria-describedby="emailHelp" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
